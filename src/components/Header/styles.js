@@ -11,6 +11,8 @@ export const Navbar = styled.nav`
   }
  ul {
    display:flex;
+   width:50%;
+   align-items:center;
    li {
      margin-right:1rem;
    }
@@ -18,4 +20,9 @@ export const Navbar = styled.nav`
 `;
 export const HomeHeaderLink = styled.div `
 width:80%;
+margin-left:15rem;
+a {
+  font-weight:500;
+  font-size:1.5rem;
+}
 `;

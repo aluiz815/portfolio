@@ -18,10 +18,10 @@ export const Navbar = styled.nav`
    }
   
  }
- @media(max-width:768px) {
+ @media(max-width:425px) {
   ul {
    display:flex;
-   width:70%;
+   width:80%;
    align-items:center;
    li {
      margin-right:1rem;
@@ -34,5 +34,11 @@ width:80%;
 a {
   font-weight:500;
   font-size:1.5rem;
+}
+@media(max-width:425px){
+  a {
+  font-weight:500;
+  font-size:0.9rem;
+}
 }
 `;

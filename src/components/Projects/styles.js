@@ -7,6 +7,9 @@ export const Container = styled.div`
   display:grid;
   grid-template-columns:repeat(3,1fr);
   padding: 4rem 1rem;
+  @media(max-width:425px) {
+    grid-template-columns:repeat(1,1fr);
+  }
 `;
 
 export const ProjectsContainer = styled.a `
@@ -14,8 +17,8 @@ color:#000;
 display:flex;
 flex-direction:column;
 align-items:center;
+margin:1rem;
 img {
-  width:64px;
   max-width:82.75px;
   height:64px;
   max-height:82.75px;
@@ -32,6 +35,9 @@ display:grid;
 justify-content:center;
 grid-column:span 3;
 margin:2.5rem;
+@media(max-width:425px) {
+  grid-column:span 1;
+}
 a {
   color: rgb(255, 255, 255);
   text-decoration: none;

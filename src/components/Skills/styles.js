@@ -7,6 +7,9 @@ export const Container = styled.div`
   display:grid;
   grid-template-columns:repeat(3,1fr);
   padding: 4rem 1rem;
+  @media(max-width:425px) {
+    grid-template-columns:repeat(1,1fr);
+  }
 `;
 
 export const SkillContainer = styled.div `

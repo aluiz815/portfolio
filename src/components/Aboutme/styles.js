@@ -6,6 +6,9 @@ export const Container = styled.div`
   flex-direction:column;
   align-items:center;
   padding: 4rem 1rem;
+  @media (max-width:768px) {
+    margin-top:3rem;
+  }
 `;
 
 export const Info = styled.div`

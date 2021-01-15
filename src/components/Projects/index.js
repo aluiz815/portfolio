@@ -5,7 +5,7 @@ function Projects() {
   return (
     <>
       <h1 style={{textAlign:'center',textTransform:'uppercase',fontWeight:'bold'}}>PROJETOS</h1>
-      <Container>
+      <Container id="projects">
         <ProjectsContainer href='https://github.com/aluiz815/proffy'>
           <img src={Proffy_img} alt="proffy_image"/>
           <h3>Proffy</h3>

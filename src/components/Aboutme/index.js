@@ -4,7 +4,7 @@ import { Container,Info,ButtonsContainer } from './styles';
 
 function Aboutme() {
   return (
-    <Container>
+    <Container id="aboutme">
       <Info>
         <h1>Eu sou André Luiz</h1>
         <p>Programador apaixonado cursando Ciência da Computação na FG. Programei diversos projetos por conta própria como hobby. <br/>

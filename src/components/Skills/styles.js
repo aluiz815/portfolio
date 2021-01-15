@@ -16,6 +16,7 @@ export const SkillContainer = styled.div `
 display:flex;
 flex-direction:column;
 align-items:center;
+margin-bottom:1.5rem;
 img {
   width:64px;
   max-width:82.75px;

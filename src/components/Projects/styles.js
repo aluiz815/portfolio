@@ -12,21 +12,37 @@ export const Container = styled.div`
   }
 `;
 
-export const ProjectsContainer = styled.a `
-color:#000;
+export const ProjectsContainer = styled.div `
 display:flex;
 flex-direction:column;
 align-items:center;
-margin:1rem;
-img {
+margin-bottom:1.5rem;
+a {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  color:#000;
+  padding:1rem;
+ &:hover {
+   background-color:rgb(0,195,255);
+   border-radius: 0.3rem;
+   box-shadow: rgba(0,196,255,0.9) 0px 13px 19px -6px;
+   transition: all 0.5s ease 0s;
+   width:50%;
+   color:#fff;
+ }
+  img {
   max-width:82.75px;
   height:64px;
   max-height:82.75px;
-}
-h3 {
+  h3 {
   font-size:1.5rem;
   font-weight:bold;
 }
+}
+}
+
+
 `;
 
 

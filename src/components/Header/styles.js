@@ -2,43 +2,24 @@ import styled from 'styled-components';
 
 export const Navbar = styled.nav`
  width:100%;
+ height:55px;
  display:flex;
+ justify-content:space-between;
  align-items:center;
- padding:10px;
+ padding:0 20px;
  border-bottom:0.01em solid rgb(204, 204, 204);
  a{
       color:#000;
   }
  ul {
    display:flex;
-   width:50%;
+   flex-flow:row nowrap;
    align-items:center;
    li {
-     margin-right:1rem;
-   }
-  
- }
- @media(max-width:425px) {
-  ul {
-   display:flex;
-   width:80%;
-   align-items:center;
-   li {
-     margin-right:1rem;
+    padding: 18px 10px;
    }
  }
-}
 `;
 export const HomeHeaderLink = styled.div `
-width:80%;
-a {
-  font-weight:500;
-  font-size:1.5rem;
-}
-@media(max-width:425px){
-  a {
-  font-weight:500;
-  font-size:0.9rem;
-}
-}
+padding:15px 0;
 `;

@@ -1,7 +1,5 @@
 import styled from 'styled-components';
 
-
-
 export const Container = styled.div`
   width:100%;
   display:grid;
@@ -12,39 +10,64 @@ export const Container = styled.div`
   }
 `;
 
-export const ProjectsContainer = styled.div `
-display:flex;
-flex-direction:column;
-align-items:center;
-margin-bottom:1.5rem;
-a {
+export const ProjectInfo = styled.div`
+  width:64px;
+  height:64px;
+  display:flex;
+  align-items:center;
+`;
+
+export const ProjectsContainer =styled.div`
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:end;
+`;
+
+export const ProjectsWrapper = styled.a`
   display:flex;
   flex-direction:column;
   align-items:center;
-  color:#000;
+  justify-content:center;
+  text-align:center;
   padding:1rem;
- &:hover {
-   background-color:rgb(0,195,255);
-   border-radius: 0.3rem;
-   box-shadow: rgba(0,196,255,0.9) 0px 13px 19px -6px;
-   transition: all 0.5s ease 0s;
-   width:50%;
-   color:#fff;
- }
-  img {
-  max-width:82.75px;
-  height:64px;
-  max-height:82.75px;
-  h3 {
-  font-size:1.5rem;
-  font-weight:bold;
-}
-}
+  width:177px;
+  &:hover {
+    background-color: rgb(0, 195, 255);
+    border-radius: 0.3rem;
+    box-shadow: rgb(0 196 255 / 90%) 0px 13px 19px -6px;
+    transition: all 0.5s ease 0s;
+    h2 {
+      color: rgb(255, 255, 255);
+    }
+    
 }
 
+@media(max-width:565px) {
+  width:130px;
+}
 
+@media(max-width:425px) {
+      margin-top:1rem;
+}
 `;
 
+export const ProjectImg = styled.img`
+  width:64px;
+`;
+export const ProjectText = styled.h2`
+  color:#000;
+  font-weight:bold;
+  font-size:1.5rem;
+  margin-top:.5rem;
+  @media(max-width:710px){
+    font-size:1rem;
+  }
+  @media(max-width:450px){
+    font-size:.8rem;
+  }
+`;
 
 export const ButtonsContainer = styled.div `
 display:grid;

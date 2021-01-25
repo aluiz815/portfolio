@@ -19,12 +19,56 @@ align-items:center;
 margin-bottom:1.5rem;
 img {
   width:64px;
-  max-width:82.75px;
-  height:64px;
-  max-height:82.75px;
 }
 h3 {
-  font-size:1.5rem;
+  color:#000;
   font-weight:bold;
+  font-size:1.5rem;
+  margin-top:.5rem;
+  @media(max-width:620px){
+    font-size:1rem;
+  }
+  @media(max-width:477px){
+    font-size:.8rem;
+  }
 }
+`;
+
+
+export const SkillsWrapper = styled.div`
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:1rem;
+  width:177px;   
+
+@media(max-width:565px) {
+  width:130px;
+}
+
+@media(max-width:425px) {
+      margin-top:1rem;
+}
+`;
+
+export const SkillImg = styled.img`
+  width:64px;
+`;
+export const SkillText = styled.h2`
+  color:#000;
+  font-weight:bold;
+  font-size:1.3rem;
+  margin-top:1rem;
+  @media(max-width:570px){
+    font-size:.9rem;
+  }
+`;
+
+export const SkillInfo = styled.div`
+  width:64px;
+  height:64px;
+  display:flex;
+  align-items:center;
 `;

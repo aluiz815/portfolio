@@ -15,7 +15,6 @@ export const Ul = styled.ul`
       top:0;
       left:0;
       right:0;
-      height:43vh;
       text-align:center;
       transition:transform 0.3s ease-in-out;
       border-radius:0px 0px 10px 10px;

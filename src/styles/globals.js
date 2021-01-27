@@ -7,15 +7,15 @@ export default createGlobalStyle`
   padding: 0;
   margin: 0;
   font-family: 'Roboto';
-  outline:none;
+  outline:0;
   box-sizing: border-box;
 }
 
-ul,li {
+li {
   list-style:none;
 }
 
-a {
+a,button {
   text-decoration: none;
   cursor: pointer;
 }

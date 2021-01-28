@@ -5,6 +5,14 @@ export const Ul = styled.ul`
     flex-flow:row nowrap;
     li {
       padding: 18px 10px;
+      a{
+        color: rgb(109, 109, 109);
+        &:hover {
+          transition: .1s ease-in-out;
+          text-decoration:underline;
+          color:#000;
+        } 
+      }
     }
 
     @media (max-width:768px) {
@@ -22,6 +30,11 @@ export const Ul = styled.ul`
         a {
           color:#fff;
           font-weight:bold;
+          &:hover {
+          transition: .1s ease-in-out;
+          text-decoration:underline;
+          color:#fff;
+        } 
         }
       }
     }

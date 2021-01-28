@@ -43,7 +43,13 @@ export const SkillsWrapper = styled.div`
   text-align:center;
   padding:1rem;
   width:177px;   
-
+  border-radius: 2px;
+  background: rgb(255, 255, 255);
+  box-shadow: rgb(0 0 0 / 20%) 0px 1px 5px 0px, rgb(0 0 0 / 14%) 0px 2px 2px 0px, rgb(0 0 0 / 12%) 0px 3px 1px -2px;
+  &:hover {
+    transition: all 0.2s ease-in-out 0s;
+    transform: scale(1.1);
+  }
 @media(max-width:565px) {
   width:130px;
 }
@@ -55,6 +61,7 @@ export const SkillsWrapper = styled.div`
 
 export const SkillImg = styled.img`
   width:64px;
+  
 `;
 export const SkillText = styled.h2`
   color:#000;

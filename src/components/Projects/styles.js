@@ -33,11 +33,15 @@ export const ProjectsWrapper = styled.a`
   text-align:center;
   padding:1rem;
   width:177px;
+  border-radius: 2px;
+  background: rgb(255, 255, 255);
+  box-shadow: rgb(0 0 0 / 20%) 0px 1px 5px 0px, rgb(0 0 0 / 14%) 0px 2px 2px 0px, rgb(0 0 0 / 12%) 0px 3px 1px -2px;
   &:hover {
     background-color: rgb(0, 195, 255);
     border-radius: 0.3rem;
     box-shadow: rgb(0 196 255 / 90%) 0px 13px 19px -6px;
-    transition: all 0.5s ease 0s;
+    transition: all 0.2s ease-in-out 0s;
+    transform: scale(1.1);
     h2 {
       color: rgb(255, 255, 255);
     }
@@ -85,5 +89,9 @@ a {
   border-radius: 0.3rem;
   box-shadow: rgba(0, 196, 255, 0.9) 0px 13px 19px -6px;
   transition: all 0.5s ease 0s;
+  &:hover {
+    box-shadow: rgb(0 196 255 / 36%) 0px 0px 17px 0px;
+    transition: all 0.5s ease 0s;
+  }
 }
 `

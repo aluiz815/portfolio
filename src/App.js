@@ -5,11 +5,11 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Footer from './components/Footer';
 import { useEffect } from 'react';
-const OneSignal = window.OneSignal;
 function App() {
+  const OneSignal = window.OneSignal;
   useEffect(()=>{
     const loadOne = async () => {
-      window.OneSignal = window.OneSignal || [];
+    window.OneSignal = await window.OneSignal || [];
     OneSignal.push(function() {
     OneSignal.init({
       appId: "f847abb8-3282-4a84-8e14-533f3649da30",
@@ -20,7 +20,7 @@ function App() {
     });
   });
     }
-    loadOne()
+    await loadOne()
   },[])
   return (
     <>

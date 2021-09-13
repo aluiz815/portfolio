@@ -4,6 +4,7 @@ import Aboutme from './components/Aboutme';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Footer from './components/Footer';
+import Iframe from './pages/iframe';
 import { useEffect } from 'react';
 function App() {
   const OneSignal = window.OneSignal;
@@ -16,12 +17,12 @@ function App() {
       safari_web_id: "web.onesignal.auto.2cd5950f-b486-4c84-8005-0f30059d0b0c",
       notifyButton: {
         enable: true,
-      },
+      }
     });
   });
     }
     loadOne()
-  },[])
+  },[OneSignal])
   return (
     <>
       <GlobalStyle/>
@@ -30,6 +31,7 @@ function App() {
       <Skills/>
       <Projects/>
       <Footer/>
+      <Iframe/>
     </>
   );
 }

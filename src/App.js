@@ -20,7 +20,7 @@ function App() {
     });
   });
     }
-    await loadOne()
+    loadOne()
   },[])
   return (
     <>

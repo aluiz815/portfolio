@@ -4,7 +4,6 @@ import Aboutme from './components/Aboutme';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Footer from './components/Footer';
-import Iframe from './pages/iframe';
 function App() {
   return (
     <>
@@ -14,7 +13,6 @@ function App() {
       <Skills/>
       <Projects/>
       <Footer/>
-      <Iframe/>
     </>
   );
 }

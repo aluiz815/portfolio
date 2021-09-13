@@ -23,7 +23,7 @@ export default function Iframe() {
         var sendMessage = function (msg) {
             console.log(`2 Mainsite is Sending Message to subdomain.site ${msg}`)
             // postMessage: https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage
-            window.parent.postMessage(msg, 'https://andredeveloper.com.br');
+            window.parent.postMessage(msg, 'https://pizza.andredeveloper.com.br');
         };
         bindEvent(window, 'load', function (e) {
             OneSignal.push(function() {

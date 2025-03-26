@@ -1,4 +1,4 @@
-(globalThis.TURBOPACK = globalThis.TURBOPACK || []).push(["static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_c2bddf66._.js", {
+(globalThis.TURBOPACK = globalThis.TURBOPACK || []).push(["static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_e160061c._.js", {
 
 "[turbopack]/browser/dev/hmr-client/hmr-client.ts [app-client] (ecmascript, async loader)": ((__turbopack_context__) => {
 
@@ -7,7 +7,7 @@ var { g: global, __dirname } = __turbopack_context__;
 __turbopack_context__.v((parentImport) => {
     return Promise.all([
   "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_61dcf9ba._.js",
-  "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_9f725a13._.js"
+  "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_bd3b97ad._.js"
 ].map((chunk) => __turbopack_context__.l(chunk))).then(() => {
         return parentImport("[turbopack]/browser/dev/hmr-client/hmr-client.ts [app-client] (ecmascript)");
     });

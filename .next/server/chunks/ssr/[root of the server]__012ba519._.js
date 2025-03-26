@@ -79,7 +79,7 @@ var __TURBOPACK__imported__module__$5b$next$5d2f$internal$2f$font$2f$google$2f$g
 ;
 ;
 const metadata = {
-    title: "Portfolio | Modern Developer",
+    title: "AJPortfolio",
     description: "A modern portfolio website built with Next.js, Tailwind CSS, and Framer Motion"
 };
 function RootLayout({ children }) {

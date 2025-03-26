@@ -1,11 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import Section from "../components/Section";
 import Button from "../components/Button";
+import emailjs from '@emailjs/browser';
 
 export default function Contact() {
+    const formRef = useRef<HTMLFormElement>(null);
     const [formState, setFormState] = useState({
         name: "",
         email: "",
@@ -29,22 +31,48 @@ export default function Contact() {
         setIsSubmitting(true);
         setError("");
 
-        // Simulate form submission
-        setTimeout(() => {
+        // Verificações básicas de validação
+        if (!formState.name || !formState.email || !formState.message) {
+            setError("Por favor, preencha todos os campos obrigatórios");
             setIsSubmitting(false);
-            setIsSubmitted(true);
-            setFormState({
-                name: "",
-                email: "",
-                subject: "",
-                message: "",
-            });
+            return;
+        }
 
-            // Reset the success message after 5 seconds
-            setTimeout(() => {
-                setIsSubmitted(false);
-            }, 5000);
-        }, 1500);
+        // Usar o EmailJS para enviar o email
+        // Substitua estes valores pelos seus do EmailJS
+        const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+        const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+        const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+
+        if (!serviceId || !templateId || !publicKey) {
+            console.log(serviceId, templateId, publicKey);
+            setError("Configuração do EmailJS não está correta. Por favor, verifique as variáveis de ambiente.");
+            setIsSubmitting(false);
+            return;
+        }
+
+        emailjs.sendForm(serviceId!, templateId!, formRef.current!, publicKey)
+            .then((result) => {
+                console.log('Email enviado com sucesso:', result.text);
+                setIsSubmitting(false);
+                setIsSubmitted(true);
+                setFormState({
+                    name: "",
+                    email: "",
+                    subject: "",
+                    message: "",
+                });
+
+                // Reset the success message after 5 seconds
+                setTimeout(() => {
+                    setIsSubmitted(false);
+                }, 5000);
+            })
+            .catch((error) => {
+                console.error('Erro ao enviar email:', error);
+                setError("Ocorreu um erro ao enviar sua mensagem. Por favor, tente novamente mais tarde.");
+                setIsSubmitting(false);
+            });
     };
 
     const contactMethods = [
@@ -148,7 +176,7 @@ export default function Contact() {
                                 <p className="text-muted-foreground">Obrigado por entrar em contato. Eu vou te responder o mais rápido possível.</p>
                             </motion.div>
                         ) : (
-                            <form onSubmit={handleSubmit} className="space-y-4">
+                            <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                     <div>
                                         <label htmlFor="name" className="block text-sm mb-1">Nome</label>
@@ -206,7 +234,7 @@ export default function Contact() {
                                     </div>
                                 )}
 
-                                <Button type="submit" disabled={isSubmitting} className="w-full">
+                                <Button type="submit" disabled={isSubmitting} className="w-full cursor-pointer">
                                     {isSubmitting ? (
                                         <span className="flex items-center justify-center">
                                             <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-primary-foreground" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">

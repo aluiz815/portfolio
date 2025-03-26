@@ -43,7 +43,7 @@ export default function About() {
                         <Button href="#contact">
                             Entre em contato
                         </Button>
-                        <Button href="/resume.pdf" variant="outline">
+                        <Button href="/download/resume.pdf" variant="outline">
                             Download Curriculo
                         </Button>
                     </div>

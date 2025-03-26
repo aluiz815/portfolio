@@ -38,7 +38,7 @@ export default function Hero() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.2 }}
                     >
-                        Olá, sou engenheiro de software focado atualmente em salesforce, porém como hobby gosto de construir
+                        Olá, me chamo André e sou engenheiro de software focado atualmente em salesforce, porém como hobby gosto de construir
                         aplicações que são rápidas, acessíveis e construídas com as melhores práticas.
                         Sempre focado em criar experiências de usuário atraentes através de design limpo e código eficiente.
                     </motion.p>

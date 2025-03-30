@@ -29,12 +29,12 @@ export default function About() {
                         Desenvolvedor apaixonado que se aventura com IA as vezes
                     </h3>
                     <p className="text-muted-foreground mb-4">
-                        Eu sou um engenheri de software com mais de 4 anos de experiência construindo e suportando aplicacoes em salesforce e que se aventura em construir
+                        Eu sou um engenheiro de software com mais de 4 anos de experiência construindo e suportando aplicações em salesforce e que se aventura em construir
                         aplicações web com tecnologias modernas. Minha jornada na engenharia de software começou com uma curiosidade
                         sobre como a web funciona, hardware e afins o que me levou a seguir uma carreira como desenvolvedor.
                     </p>
                     <p className="text-muted-foreground mb-6">
-                        Eu sou especializo em construir e suportar aplicações salesforce responsivas, acessíveis e de alto desempenho
+                        Eu sou especializado em construir e suportar aplicações salesforce responsivas, acessíveis e de alto desempenho
                         usando Apex, Omniscript, Lightning Web Components e toda sua stack de desenvolvimento,tambem já atuei como desenvolvedor/consultor marketing cloud e nos tempos livres
                         me aventuro outras tecnologias seja backend, frontend, mobile e afins.
                     </p>

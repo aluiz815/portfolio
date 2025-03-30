@@ -3,7 +3,24 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   /* config options here */
   images: {
-    domains: ["osf.digital", "pbs.twimg.com", "cdn.prod.website-files.com", "media.licdn.com"],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'osf.digital',
+      },
+      {
+        protocol: 'https',
+        hostname: 'pbs.twimg.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'cdn.prod.website-files.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'media.licdn.com',
+      },
+    ],
   },
 };
 
